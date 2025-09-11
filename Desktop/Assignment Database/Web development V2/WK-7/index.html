@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Pendulum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Pendulum</h1>
+        <p>Combining CSS animations with JavaScript control</p>
+    </header>
+    
+    <div class="container">
+        <div class="pendulum-container">
+            <div class="ceiling"></div>
+            <div class="string">
+            <div class="bob"></div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <h2>Controls</h2>
+            
+            <div class="control-group">
+                <label for="speed">Pendulum Speed</label>
+                <input type="range" id="speed" min="0.5" max="5" step="0.1" value="2">
+                <div class="value-display"><span id="speed-value">2.0</span>s</div>
+            </div>
+            
+            <div class="control-group">
+                <label for="angle">Swing Angle</label>
+                <input type="range" id="angle" min="10" max="60" step="5" value="30">
+                <div class="value-display"><span id="angle-value">30</span>°</div>
+            </div>
+            
+            <div class="buttons">
+                <button id="start-btn">Start</button>
+                <button id="stop-btn" class="stop">Stop</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="documentation">
+        <h2>Implementation Details</h2>
+        
+        <div class="part">
+            <h3>Part 1: CSS3 Transitions and Animations</h3>
+            <div class="explanation">
+                <p>The pendulum uses CSS keyframe animations for the swinging motion. The bob has a hover effect with CSS transitions for smooth scaling. The gradient backgrounds and shadows create a visually appealing design.</p>
+                <p>Key CSS features used:</p>
+                <ul>
+                    <li><code>@keyframes swing</code> for the pendulum motion</li>
+                    <li><code>transform-origin</code> to set the rotation point at the top</li>
+                    <li><code>transition</code> for smooth hover effects</li>
+                    <li>CSS gradients for realistic materials</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="part">
+            <h3>Part 2: JavaScript Functions</h3>
+            <div class="explanation">
+                <p>JavaScript functions control the animation with parameters for speed and angle. The functions demonstrate proper scope usage and return values when needed.</p>
+                <p>Key JavaScript features:</p>
+                <ul>
+                    <li>Function parameters for customization</li>
+                    <li>Local vs global scope management</li>
+                    <li>DOM manipulation to update animation properties</li>
+                    <li>Event listeners for user interaction</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="part">
+            <h3>Part 3: Combining CSS Animations with JavaScript</h3>
+            <div class="explanation">
+                <p>JavaScript dynamically controls the CSS animation by updating custom properties and toggling classes. The user can start, stop, and adjust the pendulum's behavior.</p>
+                <p>Integration techniques:</p>
+                <ul>
+                    <li>JavaScript control of CSS animation properties</li>
+                    <li>Dynamic style updates based on user input</li>
+                    <li>Class toggling to enable/disable animations</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
